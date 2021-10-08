@@ -16,3 +16,14 @@ interface ICreatRoyaltyRegistry is IERC1155TokenCreator {
     function getTokenRoyaltyPercentage(
         uint256 _tokenId
     ) external view returns (uint8);
+
+    /**
+     * @dev Utililty function to calculate the royalty fee for a token.
+     * @param _tokenId uint256 token ID.
+     * @param _amount uint256 wei amount.
+     * @return uint256 wei fee.
+     */
+    function calculateRoyaltyFee(
+        uint256 _tokenId,
+        uint256 _amount
+    ) external view returns (uint256);
