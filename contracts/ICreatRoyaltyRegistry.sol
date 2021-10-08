@@ -27,3 +27,17 @@ interface ICreatRoyaltyRegistry is IERC1155TokenCreator {
         uint256 _tokenId,
         uint256 _amount
     ) external view returns (uint256);
+       /**
+     * @dev Sets the royalty percentage set for an Creat token
+     * Requirements:
+
+     * - `_percentage` must be <= 100.
+     * - only the owner of this contract or the creator can call this method.
+     * @param _tokenId uint256 token ID.
+     * @param _percentage uint8 wei royalty fee.
+     */
+    function setPercentageForTokenRoyalty(
+        uint256 _tokenId,
+        uint8 _percentage
+    ) external returns (uint8);
+}
