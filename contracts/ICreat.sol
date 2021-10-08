@@ -3,7 +3,9 @@
 pragma solidity 0.6.12;
 
 
-
+/**
+ * @dev Interface for interacting with the Creat contract that holds Creat beta tokens.
+ */
 interface ICreat {
 
     /**
